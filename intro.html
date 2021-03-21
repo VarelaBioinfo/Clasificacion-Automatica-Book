@@ -1,0 +1,1506 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificación Automática &#8212; Bioinformática y Estadística II-IV Clasificación Automática</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bioinformática y Estadística II - IV Clasificación Automática" href="ProyectoMushrooms-VarelaVegaAlfredo.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Bioinformática y Estadística II-IV Clasificación Automática</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="#">
+   Clasificación Automática
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProyectoMushrooms-VarelaVegaAlfredo.html">
+   Bioinformática y Estadística II - IV Clasificación Automática
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProyectoMushrooms-VarelaVegaAlfredo.html#transforming-letter-labels-to-numeric-labels-for-applying-the-models">
+   Transforming letter labels to numeric labels for applying the models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProyectoMushrooms-VarelaVegaAlfredo.html#spliting-dataset-into-random-train-and-test-subsets">
+   Spliting dataset into random train and test subsets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProyectoMushrooms-VarelaVegaAlfredo.html#classifing-by-k-nearest-neighbor">
+   Classifing by k-nearest neighbor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ProyectoMushrooms-VarelaVegaAlfredo.html#classifing-by-support-vector-machine">
+   Classifing by Support Vector Machine
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Clasificación Automática
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#que-es-la-inteligencia-artificia">
+     Qué es la inteligencia artificia?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aprendizaje-automatico">
+     Aprendizaje automático
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redes-neuronales">
+     Redes neuronales
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#genomica">
+     Genómica
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#perspectiva">
+     Perspectiva
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Clasificación Automática
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aprendizaje-de-maquina">
+     Aprendizaje de máquina
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos">
+     2 tipos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spam-vs-no-spam">
+       Spam vs no spam
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aprendizaje-supervisado">
+       Aprendizaje supervisado
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aprendizaje-supervisado-supervised-learning">
+     Aprendizaje supervisado (supervised learning)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelo-de-seleccion">
+     Modelo de selección
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#medidas-de-evaluacion">
+     Medidas de evaluación
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vector-space-classification">
+     Vector Space Classification
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hipotesis-de-contiguidad">
+       Hipotesis de contigüidad:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rocchio-classification">
+     Rocchio classification
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k-nearest-neightbour-classification">
+     k nearest neightbour classification
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#support-vector-machines">
+     Support Vector Machines
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distancia-euclidiana">
+     Distancia Euclidiana
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clasificacion-k-nearest-neighbour">
+   Clasificación k nearest neighbour
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clasificacion-svm">
+   Clasificación SVM
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#red-neuronal-convulusional">
+   Red neuronal convulusional
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-convertir-los-caracteres-a-numeros-para-crear-los-vectores">
+     Cómo convertir los caracteres a números para crear los vectores
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="clasificacion-automatica">
+<h1>Clasificación Automática<a class="headerlink" href="#clasificacion-automatica" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="que-es-la-inteligencia-artificia">
+<h2>Qué es la inteligencia artificia?<a class="headerlink" href="#que-es-la-inteligencia-artificia" title="Permalink to this headline">¶</a></h2>
+<p>Area de las ciencias de computación dedicada a diseñar sisteamas de computo que aprendan, decidan y solucionen problemas.</p>
+<ul class="simple">
+<li><p>Test de Turing (juego de la imitación)</p>
+<ul>
+<li><p>hay 2 humanos y una maquina, el humano no debe saber cuál de los otros dos es la máquina.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="aprendizaje-automatico">
+<h2>Aprendizaje automático<a class="headerlink" href="#aprendizaje-automatico" title="Permalink to this headline">¶</a></h2>
+<p>Aprender en datos de entrada para lograr clasificar datos a futuro</p>
+<p>Las máquinas han logrado</p>
+<ul class="simple">
+<li><p>colorear</p></li>
+<li><p>manejar un auto</p></li>
+<li><p>jugar</p></li>
+</ul>
+<p>## Partes</p>
+<ul class="simple">
+<li><p>nodos de entrada</p></li>
+<li><p>nodos intermedios u ocultos</p></li>
+<li><p>nodos de salida</p></li>
+<li><p>Pesos</p></li>
+<li><p>dan como salida un 0 o un 1</p></li>
+<li><p>suma</p></li>
+<li><p>Función de activación</p></li>
+<li><p>output</p></li>
+</ul>
+<p>Diferencia entre deep learning y red neuronal?
+si se usan matrices y funciones por qué no es más en R?</p>
+<p>Red neuonal: funcion que trabaja con vectores internos que al final activan uno solo de los nodos de salida.</p>
+<p><a class="reference external" href="https://quickdraw.withgoogle.com">Red neuronal y dibujos</a></p>
+<ul class="simple">
+<li><p>vector de 784 componentes</p></li>
+<li><p>cada uno es un nodo de entrada a la red</p></li>
+</ul>
+</div>
+<div class="section" id="redes-neuronales">
+<h2>Redes neuronales<a class="headerlink" href="#redes-neuronales" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=MRIv2IwFTPg">video redes neuronales</a>
+variables de entrada que definen una regla o un hiperplano, la neurona lo que hace es una regresión lineal, bias es otra conexión en el que la variable siempre está asignada a uno</p>
+</div>
+<div class="section" id="genomica">
+<h2>Genómica<a class="headerlink" href="#genomica" title="Permalink to this headline">¶</a></h2>
+<p>Reconocimiento de entidades u objetos</p>
+<ul class="simple">
+<li><p>Enhancers en dna</p></li>
+<li><p>histonas en cierta condición</p></li>
+<li><p>detectar regiones coding vs non-coding</p></li>
+<li><p>etiquetado de genomas completos</p></li>
+<li><p>Datos inputados (faltantes)</p></li>
+<li><p>ENCODE concurso para descubrir regiones ausentes en el cubo de información</p></li>
+</ul>
+<p>Autoencoder: Recibe una matriz de entrada (resultados de métodos de expresión) y reconstruye la misma entrada como salida. Representación comparta y densa</p>
+</div>
+<div class="section" id="perspectiva">
+<h2>Perspectiva<a class="headerlink" href="#perspectiva" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>predicción pero no entendimiento del problema</p></li>
+<li><p>da solución pero no explicación</p></li>
+<li><p>correlaciona datos pero no causa</p></li>
+<li><p>Hipótesis pero no llega a conclusiones</p></li>
+</ul>
+<p>tipo de arquitectura de red neuronal que combina distintos tipos</p>
+<ul class="simple">
+<li><p>full conected</p></li>
+<li><p>combinar diferentes arquitecturas</p>
+<ul>
+<li><p>red neuronal convulusional</p></li>
+<li><p>autoencoders</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>Clasificación Automática<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Aprendizaje supervisado</p>
+<div class="section" id="aprendizaje-de-maquina">
+<h2>Aprendizaje de máquina<a class="headerlink" href="#aprendizaje-de-maquina" title="Permalink to this headline">¶</a></h2>
+<p>Estudio y desarrollo de algoritmos que pueden “aprender” a partir de datos y hacer predicciones sobre ellos.</p>
+<p>Esos algoritmos construyen un modelo a partir de los datos para hacer predicciones o “tomar decisiones.</p>
+<p>Algoritmo: serie de pasos finitos y ordenados para resolver un problema
+Quién hace el algoritmo?</p>
+<ul class="simple">
+<li><p>una persona</p></li>
+<li><p>una computadora</p></li>
+</ul>
+<p>¿Cuando puede usarse?</p>
+<ul class="simple">
+<li><p>Problemas muy compejos</p></li>
+<li><p>Muchos datos y muchas variables</p></li>
+<li><p>Solución en relativamente poco tiempo comparado con lo que tardaría una persona en hacer el algoritmo</p></li>
+<li><p>No se requiere un entendimiento completo del fenómeno (patrones de los datos)
+<span class="xref myst">enlace aprendizaje de maquina</span></p></li>
+</ul>
+</div>
+<div class="section" id="tipos">
+<h2>2 tipos<a class="headerlink" href="#tipos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Supervisado</strong>: La computadora recibe ejemplos de entrada asignados a un valor o clase (target) a partir de los cuales aprende patrones para predecir el valor o clase de nuevos ejemplos</p></li>
+<li><p><strong>No supervisado</strong> : Solo recibe datos de entrada y tiene que descubrir patrones de relaciones en esos datos, por ejemplo, cómo se organizan los datos (clustering)</p></li>
+</ul>
+<div class="section" id="spam-vs-no-spam">
+<h3>Spam vs no spam<a class="headerlink" href="#spam-vs-no-spam" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>input correo</p></li>
+<li><p>algoritmo : sustituimos el conocimiento de cómo hacer el algoritmo por ejemplos o datos manualmente clasificados por una persona, se los paso a una algoritmo de predicción</p></li>
+<li><p>salida es spam o no es spam</p></li>
+</ul>
+</div>
+<div class="section" id="aprendizaje-supervisado">
+<h3>Aprendizaje supervisado<a class="headerlink" href="#aprendizaje-supervisado" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>gatos vs no gatos</p></li>
+<li><p>se divide en dos</p>
+<ul>
+<li><p>clasificación: se predicen categorias o etiquetas (gatos vs no), cancer a partir de mastografía, genomas completos y regiones genomicas en clase</p></li>
+<li><p>regresion: identificar valores numericos, predecir datos de covid a partir de datos que se tienen, indice de obesidad en méxico</p></li>
+</ul>
+</li>
+</ul>
+<p><a class="reference external" href="https://www.nature.com/articles/nrg3920#article-info">machine learning applications in genetics and genomics, Maxwell W. Libbrecht y William Stafford Noble</a></p>
+</div>
+</div>
+<div class="section" id="aprendizaje-supervisado-supervised-learning">
+<h2>Aprendizaje supervisado (supervised learning)<a class="headerlink" href="#aprendizaje-supervisado-supervised-learning" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>ejemplos: objeto, vector, instancia, registro</p>
+<ul>
+<li><p>ejemplos de lo que quieres clasificar</p></li>
+</ul>
+</li>
+<li><p>clase: etiqueta asignada a cada ejemplo clasificado</p>
+<ul>
+<li><p>tipos de galaxias</p></li>
+<li><p>areas de especialidad médica</p></li>
+</ul>
+</li>
+<li><p>Características: atributos de los ejemplos que serán usados para clasificarlos</p>
+<ul>
+<li><p>palabras del titulo, abstract, revista de publicación</p></li>
+<li><p>características de regiones genómicas: frecuencia de ATCG</p></li>
+<li><p>genes de expresión: valores de expresión</p></li>
+</ul>
+</li>
+<li><p>Conjunto de datos de entrenamiento</p>
+<ul>
+<li><p>Conjunto de ejemplos previamente clasificados</p></li>
+</ul>
+</li>
+<li><p>Conjunto de datos de validación</p>
+<ul>
+<li><p>Conjunto de ejemplos previamente clasificados usados para medir el rendimiento de varios modelos predictivos y seleccionar el mejor , para poner a competir los modelos</p></li>
+</ul>
+</li>
+<li><p>Conjunto de datos de evaluación</p>
+<ul>
+<li><p>Conjunto de ejemplos preciamente clasificados que serán clasificados usando el mejor modelo predictivo para su renimiento, medida</p></li>
+</ul>
+</li>
+<li><p>Modelo clasificador</p>
+<ul>
+<li><p>función que recibe los valores de las características de un ejemplo y regres su correspondeiente, producto del entrenamiento</p></li>
+<li><p>support vector machine</p></li>
+<li><p>neural network</p></li>
+</ul>
+</li>
+</ul>
+<p>## Dos problemas de clasificación automática</p>
+<ul class="simple">
+<li><p>Binaria</p>
+<ul>
+<li><p>se predice entre dos clases</p></li>
+</ul>
+</li>
+<li><p>Multiclase</p>
+<ul>
+<li><p>más de dos clase (muchas veces se ataca</p></li>
+<li><p>one-of (single-label) clases mutuamente excluyentes</p></li>
+<li><p>any-of (multilabel) clases no son mutuamente excluyentes</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="modelo-de-seleccion">
+<h2>Modelo de selección<a class="headerlink" href="#modelo-de-seleccion" title="Permalink to this headline">¶</a></h2>
+<p>cuando tenemos pocos datos solo dividimos en dos</p>
+<ul class="simple">
+<li><p>model fitting (k-fold cross validation)</p>
+<ul>
+<li><p>k=10 entonces se divide en 10 folds, el 1 , 2,3,…,n</p></li>
+<li><p>Utiliza k -1 folds para entrenar y un fold para evaluar</p></li>
+<li><p>Luego cambiamos el fold de validación y los otros k-2 para evaluar</p></li>
+<li><p>asi hasta que usamos todos para entrenar y todos para evaluar</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="Clasificación con muchos y pocos datos" src="images/clasificacion-muchos-pocos.png" /></p>
+</div>
+<div class="section" id="medidas-de-evaluacion">
+<h2>Medidas de evaluación<a class="headerlink" href="#medidas-de-evaluacion" title="Permalink to this headline">¶</a></h2>
+<p>Se calculan como verdaders positivas VN, FP y FN en clasifiación binaria</p>
+<ul class="simple">
+<li><p>precision</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(\frac{tp}{tp+fp}\)</span></p>
+<ul class="simple">
+<li><p>recall (sensitivity)
+<span class="math notranslate nohighlight">\(tp/tp+fn\)</span></p></li>
+</ul>
+<p><img alt="precision y recall" src="images/precision-recall.png" /></p>
+<ul class="simple">
+<li><p>F-score
+<span class="math notranslate nohighlight">\(precision* reacall/ precision+recall\)</span></p></li>
+<li><p>matriz de confusion</p></li>
+<li><p>auroc</p></li>
+<li><p>curvas de evaluacion</p>
+<ul>
+<li><p>Precision-Recall curve</p>
+<ul>
+<li><p>util cuando los datos son muy desbalanceados</p></li>
+<li><p>muestra el balance entre la precision y el recall para diferentes umbrales</p></li>
+<li><p>gran area bajo la curva representa un alto recall y una alta precision</p></li>
+<li><p>(recall es bajo al principio pues lleva pocos)</p></li>
+</ul>
+</li>
+<li><p>Curva ROC(reciever operating characteristics)</p>
+<ul>
+<li><p>ROC curve represent ala tasa de verdaderos positivos en el eje Y u la tasa de falsos positivos en el eje X</p></li>
+<li><p>La esquina superior izquierda e el punto ideal</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="curva Roc" src="images/curva-roc.png" /></p>
+<ul class="simple">
+<li><p>Un modelo con mejor precision dice que lo que dice que es clase positiva seguramente es clase positiva</p></li>
+<li><p>Un modelo con mejor recall lo que te dice que es clase positiva no forzosamente lo será pero te da muchos, si equivocarte en tu predicción no es tan crucial y prefieres predecir muchos casos nuevos</p></li>
+<li><p>f alta es el balance de la precision y el recall
+<a class="reference external" href="https://www.youtube.com/watch?v=nKW8Ndu7Mjw">The 7 steps of machine learning</a></p></li>
+</ul>
+<p>Entre más datos le des será mejor la predicción</p>
+<ul class="simple">
+<li><p>Puede ser que se está sobreajustando la máquina</p></li>
+</ul>
+<p><img alt="deep learning" src="images/deep-learning.png" /></p>
+</div>
+<div class="section" id="vector-space-classification">
+<h2>Vector Space Classification<a class="headerlink" href="#vector-space-classification" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Representa cada ejemplo como un vector en un espacio n-dimensional</p>
+<ul>
+<li><p>Si la galaxia está descrita con 20 características entonces son 20 dimensiones la del espacio vectorial</p></li>
+<li><p>profesion, edad, país (espacio vectorial de entrada de 3 dimensiones)</p></li>
+<li><p>Características a partir de datos textuales</p>
+<ul>
+<li><p>palabras (un espacio auto casa grand)</p>
+<ul>
+<li><p>se construye un vocabulario (palabras únicas en todo el documento</p>
+<ul>
+<li><p>puede también cuantificarse la frecuencia de aparición de una palabra</p></li>
+<li><p>TF IDF se le pone un peso a una palabra</p></li>
+<li><p>se calcula una distancia euclidiana</p>
+<ul>
+<li><p>la menor distancia como más parecidos
+<span class="math notranslate nohighlight">\(\sqrt{}sum{)(A_i-B_i)^2}\)</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                   <span class="n">un</span> <span class="n">espacio</span> <span class="n">auto</span> <span class="n">casa</span> <span class="n">grande</span>
+<span class="n">un</span> <span class="n">auto</span> <span class="n">grande</span>     <span class="mi">1</span>  <span class="mi">0</span>       <span class="mi">1</span>    <span class="mi">0</span>      <span class="mi">1</span> 
+<span class="n">un</span> <span class="n">espacio</span> <span class="n">grande</span>  <span class="mi">1</span>  <span class="mi">1</span>       <span class="mi">0</span>    <span class="mi">0</span>      <span class="mi">1</span> 
+<span class="n">casa</span> <span class="n">grande</span>        <span class="mi">0</span>  <span class="mi">0</span>       <span class="mi">0</span>    <span class="mi">1</span>      <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="section" id="hipotesis-de-contiguidad">
+<h3>Hipotesis de contigüidad:<a class="headerlink" href="#hipotesis-de-contiguidad" title="Permalink to this headline">¶</a></h3>
+<p>Los ejemplos de la misma clase forman una región contigua y regiones de diferentes clases no se traslapan</p>
+<ul class="simple">
+<li><p>En dos dimiensiones, un clasificador lineal es una linea (hiperplano) que separa dos clases</p>
+<ul>
+<li><p>se le denomina problema linealmente separable si existe un hiperplano separador</p></li>
+<li><p>hay un número infinito posible de hiperplanos separadores</p></li>
+<li><p>Es necesario un criterio de selección del mejor hiperplano</p>
+<ul>
+<li><p>Existe un límite de clases (class boundary), límite real entre dos clases</p></li>
+<li><p>Ejemplos ruido</p>
+<ul>
+<li><p>Estan en clavados en la otra clase</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="rocchio-classification">
+<h2>Rocchio classification<a class="headerlink" href="#rocchio-classification" title="Permalink to this headline">¶</a></h2>
+<p>Divide un espacio vectorial en regiones asociadas a centroides (prototipos) uno por clase</p>
+<ul class="simple">
+<li><p>Es simple y eficiente pero impreciso en clsases que no sean aproximadamente esferas con radio similar</p></li>
+<li><p>Para clasificar un ejemmplo se determina la región donde aparece</p></li>
+<li><p>la tarea de un clasificador basado en espacio de vectores es calcular buenos límites (boundaries</p></li>
+<li><p>Buenos límites</p>
+<ul>
+<li><p>con alto nivel de exactitud en la clasificación de nuevos datos (no observados en el training set)</p></li>
+</ul>
+</li>
+<li><p>usa centroides para definir los límites</p>
+<ul>
+<li><p>Es el vector promedio de sus miembros</p></li>
+<li><p>limite entre dos clases es el conjunto de puntos con igual distancia de dos centroides</p></li>
+<li><p>Para clasificar un ejemplo se encuentra el centroide más cercano y le asigna dicha clase</p></li>
+</ul>
+</li>
+<li><p>Su problema es que las clases no se parecen a una esfera o a un círculo con radio similar, hay problemas</p></li>
+</ul>
+<p><img alt="rocchio classification" src="images/rocchio-classif.png" /></p>
+</div>
+<div class="section" id="k-nearest-neightbour-classification">
+<h2>k nearest neightbour classification<a class="headerlink" href="#k-nearest-neightbour-classification" title="Permalink to this headline">¶</a></h2>
+<p>Asigna la clase mayoritaria de los K vecinos cercanoos al ejemplo a clasificar en lugar de usar el centoide más cercano</p>
+<ul class="simple">
+<li><p>Es  menos eficiente en clasifiación de documentos</p></li>
+<li><p>No requiere entrenamiento explícito</p></li>
+<li><p>Si el training set es grande puede trabajar mejor que el rocchio en estructuras no esféricas</p></li>
+<li><p>1NN es el one nearest neighbour</p></li>
+<li><p>kNN es un k &gt; a 1</p>
+<ul>
+<li><p>k se selecciona con base en la experiencia y el conocimiento</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(k =3\)</span> y <span class="math notranslate nohighlight">\(k =5\)</span> son los más comunes</p></li>
+<li><p>iteración de aprendizaje para probar el mejor valor de <span class="math notranslate nohighlight">\(k\)</span></p></li>
+</ul>
+</li>
+<li><p>se asigna una probabilidad a cada vecino</p></li>
+<li><p>se puede ponderara al más cercano más peso y a los no tan cercanos menos</p></li>
+<li><p>no hay estimación de parámetros como en Rocchio classification(centroides) o en Naive Bayes(probabilidad a priori y condicionales)</p></li>
+<li><p>Simplemente memoriza todos los ejemplos del training set y compara el test set con ellos</p>
+<ul>
+<li><p>memory-based learning o instance-based learning</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="support-vector-machines">
+<h2>Support Vector Machines<a class="headerlink" href="#support-vector-machines" title="Permalink to this headline">¶</a></h2>
+<p>Busca un hiperplano que tenga la máxima distncia (máximo margen) con los puntos(ejemplos) que estén más cerca del mismo</p>
+<ul class="simple">
+<li><p>Elementos</p>
+<ul>
+<li><p>Margen (margin)</p>
+<ul>
+<li><p>distancia de la superficie de decisión al punto (ejemplo) más cercano</p></li>
+</ul>
+</li>
+<li><p>Función de decisión</p>
+<ul>
+<li><p>depende de un subconjunto de datos que definen la posición del separador</p></li>
+</ul>
+</li>
+<li><p>Vectores de soporte</p>
+<ul>
+<li><p>son los puntos que sirven para maximizar la región</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Te puede decir la probabilidad de que pertenezca a una clase o a otra</p></li>
+<li><p>aunque puedas hacer una transformaciones dimensionales, existe pérdida de la dimensionalidad</p></li>
+</ul>
+<p><img alt="support vector machine" src="images/svm.png" /></p>
+<p><a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a></p>
+</div>
+<div class="section" id="distancia-euclidiana">
+<h2>Distancia Euclidiana<a class="headerlink" href="#distancia-euclidiana" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">norm</span>
+
+<span class="n">d1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">d3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 0 1 0 1]
+[1 1 0 0 1]
+[0 0 0 1 1]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dist_e</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">d2</span><span class="o">-</span><span class="n">d1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distancia euclidiana entre d1 y d2: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dist_e</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distancia euclidiana entre d1 y d2: 1.4142135623730951
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dist_e</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">d2</span><span class="o">-</span><span class="n">d3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distancia euclidiana entre d1 y d3: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dist_e</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distancia euclidiana entre d1 y d3: 1.7320508075688772
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="clasificacion-k-nearest-neighbour">
+<h1>Clasificación k nearest neighbour<a class="headerlink" href="#clasificacion-k-nearest-neighbour" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cargar una data set muy famoso de plantas </span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="c1"># Da infromación del set de datos </span>
+<span class="c1"># 150 instancias, ejemplos </span>
+<span class="c1"># 4 atributos o características numericos (4 predictores y 3 clase)</span>
+<span class="c1"># El problema es de clasifiación es one of, son mutuamente excluyentes, solamente asignaremos una clase a cada ejemplo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">DESCR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.. _iris_dataset:
+
+Iris plants dataset
+--------------------
+
+**Data Set Characteristics:**
+
+    :Number of Instances: 150 (50 in each of three classes)
+    :Number of Attributes: 4 numeric, predictive attributes and the class
+    :Attribute Information:
+        - sepal length in cm
+        - sepal width in cm
+        - petal length in cm
+        - petal width in cm
+        - class:
+                - Iris-Setosa
+                - Iris-Versicolour
+                - Iris-Virginica
+                
+    :Summary Statistics:
+
+    ============== ==== ==== ======= ===== ====================
+                    Min  Max   Mean    SD   Class Correlation
+    ============== ==== ==== ======= ===== ====================
+    sepal length:   4.3  7.9   5.84   0.83    0.7826
+    sepal width:    2.0  4.4   3.05   0.43   -0.4194
+    petal length:   1.0  6.9   3.76   1.76    0.9490  (high!)
+    petal width:    0.1  2.5   1.20   0.76    0.9565  (high!)
+    ============== ==== ==== ======= ===== ====================
+
+    :Missing Attribute Values: None
+    :Class Distribution: 33.3% for each of 3 classes.
+    :Creator: R.A. Fisher
+    :Donor: Michael Marshall (MARSHALL%PLU@io.arc.nasa.gov)
+    :Date: July, 1988
+
+The famous Iris database, first used by Sir R.A. Fisher. The dataset is taken
+from Fisher&#39;s paper. Note that it&#39;s the same as in R, but not as in the UCI
+Machine Learning Repository, which has two wrong data points.
+
+This is perhaps the best known database to be found in the
+pattern recognition literature.  Fisher&#39;s paper is a classic in the field and
+is referenced frequently to this day.  (See Duda &amp; Hart, for example.)  The
+data set contains 3 classes of 50 instances each, where each class refers to a
+type of iris plant.  One class is linearly separable from the other 2; the
+latter are NOT linearly separable from each other.
+
+.. topic:: References
+
+   - Fisher, R.A. &quot;The use of multiple measurements in taxonomic problems&quot;
+     Annual Eugenics, 7, Part II, 179-188 (1936); also in &quot;Contributions to
+     Mathematical Statistics&quot; (John Wiley, NY, 1950).
+   - Duda, R.O., &amp; Hart, P.E. (1973) Pattern Classification and Scene Analysis.
+     (Q327.D83) John Wiley &amp; Sons.  ISBN 0-471-22361-1.  See page 218.
+   - Dasarathy, B.V. (1980) &quot;Nosing Around the Neighborhood: A New System
+     Structure and Classification Rule for Recognition in Partially Exposed
+     Environments&quot;.  IEEE Transactions on Pattern Analysis and Machine
+     Intelligence, Vol. PAMI-2, No. 1, 67-71.
+   - Gates, G.W. (1972) &quot;The Reduced Nearest Neighbor Rule&quot;.  IEEE Transactions
+     on Information Theory, May 1972, 431-433.
+   - See also: 1988 MLC Proceedings, 54-64.  Cheeseman et al&quot;s AUTOCLASS II
+     conceptual clustering system finds 3 classes in the data.
+   - Many, many more ...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># Leemos conjunto de ejemplos</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="c1"># Leemos valores de clase para cada ejemplo</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="c1"># Separamos el dataset en dos: entrenamiento y evaluación</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5.1 3.5 1.4 0.2]
+ [4.9 3.  1.4 0.2]
+ [4.7 3.2 1.3 0.2]
+ [4.6 3.1 1.5 0.2]
+ [5.  3.6 1.4 0.2]]
+[0 0 0 0 0]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+
+<span class="c1"># Clasificación K Nearest neighbors </span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># Definición del clasificador</span>
+<span class="n">classifier</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+<span class="c1"># Entrenamiento del clasificador con lo datos de entrenamiento y valores de clase para cada ejemplo</span>
+<span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="c1"># Predicción con el clasificador entrenado en los datos de evaluación </span>
+<span class="n">y_predict</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classifier</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">([])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=1)
+[[5.8 2.8 5.1 2.4]
+ [6.  2.2 4.  1. ]
+ [5.5 4.2 1.4 0.2]
+ [7.3 2.9 6.3 1.8]
+ [5.  3.4 1.5 0.2]]
+[2 1 0 2 0]
+[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Medidas de rendimiento del clasificador</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">recall_score</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Precision: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s2">&quot;macro&quot;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s2">&quot;macro&quot;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;F-score: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s2">&quot;macro&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 0.9777777777777777
+Precision: 0.9722222222222222
+Recall: 0.9814814814814815
+F-score: 0.975983436853002
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+
+<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Iris-Setosa&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-Versicolour&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-Virginica&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  precision    recall  f1-score   support
+
+     Iris-Setosa       1.00      1.00      1.00        16
+Iris-Versicolour       1.00      0.94      0.97        18
+  Iris-Virginica       0.92      1.00      0.96        11
+
+        accuracy                           0.98        45
+       macro avg       0.97      0.98      0.98        45
+    weighted avg       0.98      0.98      0.98        45
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">plot_confusion_matrix</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">))</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">classifier</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">,</span> 
+                      <span class="n">display_labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Iris-Setosa&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-Versicolour&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-Virginica&#39;</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[16  0  0]
+ [ 0 17  1]
+ [ 0  0 11]]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7fe7c3200130&gt;
+</pre></div>
+</div>
+<img alt="_images/intro_13_2.png" src="_images/intro_13_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predecir valor de clase de nuevo ejemplo </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">10.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">7.8</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]]))</span>
+
+<span class="c1"># PRedecir probabilidades de clase de nuevo ejemplo </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classifier</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">([[</span><span class="mf">10.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">7.8</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]]))</span>
+
+<span class="c1"># PRedecir probailidad de clases de nuevo ejemplo </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classifier</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">([[</span><span class="mf">10.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">7.8</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2]
+[[0. 0. 1.]]
+(array([[3.37934905]]), array([[71]]))
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="clasificacion-svm">
+<h1>Clasificación SVM<a class="headerlink" href="#clasificacion-svm" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<span class="c1"># cargar set de datos e imprimir descripción</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">DESCR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.. _iris_dataset:
+
+Iris plants dataset
+--------------------
+
+**Data Set Characteristics:**
+
+    :Number of Instances: 150 (50 in each of three classes)
+    :Number of Attributes: 4 numeric, predictive attributes and the class
+    :Attribute Information:
+        - sepal length in cm
+        - sepal width in cm
+        - petal length in cm
+        - petal width in cm
+        - class:
+                - Iris-Setosa
+                - Iris-Versicolour
+                - Iris-Virginica
+                
+    :Summary Statistics:
+
+    ============== ==== ==== ======= ===== ====================
+                    Min  Max   Mean    SD   Class Correlation
+    ============== ==== ==== ======= ===== ====================
+    sepal length:   4.3  7.9   5.84   0.83    0.7826
+    sepal width:    2.0  4.4   3.05   0.43   -0.4194
+    petal length:   1.0  6.9   3.76   1.76    0.9490  (high!)
+    petal width:    0.1  2.5   1.20   0.76    0.9565  (high!)
+    ============== ==== ==== ======= ===== ====================
+
+    :Missing Attribute Values: None
+    :Class Distribution: 33.3% for each of 3 classes.
+    :Creator: R.A. Fisher
+    :Donor: Michael Marshall (MARSHALL%PLU@io.arc.nasa.gov)
+    :Date: July, 1988
+
+The famous Iris database, first used by Sir R.A. Fisher. The dataset is taken
+from Fisher&#39;s paper. Note that it&#39;s the same as in R, but not as in the UCI
+Machine Learning Repository, which has two wrong data points.
+
+This is perhaps the best known database to be found in the
+pattern recognition literature.  Fisher&#39;s paper is a classic in the field and
+is referenced frequently to this day.  (See Duda &amp; Hart, for example.)  The
+data set contains 3 classes of 50 instances each, where each class refers to a
+type of iris plant.  One class is linearly separable from the other 2; the
+latter are NOT linearly separable from each other.
+
+.. topic:: References
+
+   - Fisher, R.A. &quot;The use of multiple measurements in taxonomic problems&quot;
+     Annual Eugenics, 7, Part II, 179-188 (1936); also in &quot;Contributions to
+     Mathematical Statistics&quot; (John Wiley, NY, 1950).
+   - Duda, R.O., &amp; Hart, P.E. (1973) Pattern Classification and Scene Analysis.
+     (Q327.D83) John Wiley &amp; Sons.  ISBN 0-471-22361-1.  See page 218.
+   - Dasarathy, B.V. (1980) &quot;Nosing Around the Neighborhood: A New System
+     Structure and Classification Rule for Recognition in Partially Exposed
+     Environments&quot;.  IEEE Transactions on Pattern Analysis and Machine
+     Intelligence, Vol. PAMI-2, No. 1, 67-71.
+   - Gates, G.W. (1972) &quot;The Reduced Nearest Neighbor Rule&quot;.  IEEE Transactions
+     on Information Theory, May 1972, 431-433.
+   - See also: 1988 MLC Proceedings, 54-64.  Cheeseman et al&quot;s AUTOCLASS II
+     conceptual clustering system finds 3 classes in the data.
+   - Many, many more ...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># Leemos conjunto de ejemplos</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="c1"># Leemos valores de clase para cada ejemplo</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span>
+<span class="c1"># imprimimos los 5 primeros </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="c1"># Separamos el dataset en dos: entrenamiento y evaluación (separación en 70/30)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5.1 3.5 1.4 0.2]
+ [4.9 3.  1.4 0.2]
+ [4.7 3.2 1.3 0.2]
+ [4.6 3.1 1.5 0.2]
+ [5.  3.6 1.4 0.2]]
+[0 0 0 0 0]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+
+<span class="c1"># Clasificación SVM</span>
+<span class="c1"># Definición del clasificador</span>
+<span class="c1"># separación lineal de las clases, maquina de soporte clásica, un kernel es una transformación del espación. De un espacio hacia a otro </span>
+<span class="c1"># se le llama truco de kernel pues al transfarmar es posible que en el espacio transformado sea más fácil dividir los datos </span>
+<span class="c1">#svm_classifier = SVC(kernel=&quot;linear&quot;)</span>
+<span class="c1"># Se añade el calculo de probabilidades, solamente sirve para calcular la distancia entre tus datos de entrenamiento con los datos de soporte, generalmente se desactiva pues es más tardada la corrida</span>
+<span class="n">svm_classifier</span><span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">probability</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Entrenamiento del clasificador con lo datos de entrenamiento y valores de clase para cada ejemplo</span>
+<span class="n">svm_classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="c1"># Predicción con el clasificador entrenado en los datos de evaluación </span>
+<span class="n">y_predict</span> <span class="o">=</span> <span class="n">svm_classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="c1"># No es lo acostumbrado pero podemos visualizar así  para comparar clases verdaderas vs predichas</span>
+<span class="c1"># imprimir los valores verdaderos </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
+<span class="c1"># imprimir los valores predichos o de clase</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2 1 0 2 0 2 0 1 1 1 2 1 1 1 1 0 1 1 0 0 2 1 0 0 2 0 0 1 1 0 2 1 0 2 2 1 0
+ 1 1 1 2 0 2 0 0]
+[2 1 0 2 0 2 0 1 1 1 2 1 1 1 1 0 1 1 0 0 2 1 0 0 2 0 0 1 1 0 2 1 0 2 2 1 0
+ 2 1 1 2 0 2 0 0]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Medidas de rendimiento del clasificador</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">f1_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">precision_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">recall_score</span>
+
+<span class="c1"># Buenos valores de predicción</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Precision: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s2">&quot;macro&quot;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Recall: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s2">&quot;macro&quot;</span><span class="p">)))</span>
+<span class="c1"># Es el promedio</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;F-score: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s2">&quot;macro&quot;</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 0.9777777777777777
+Precision: 0.9722222222222222
+Recall: 0.9814814814814815
+F-score: 0.975983436853002
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+<span class="c1"># PAra comparar dos estudios es importante utilizar la misma semilla en ambos</span>
+<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Iris-Setosa&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-Versicolour&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-Virginica&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  precision    recall  f1-score   support
+
+     Iris-Setosa       1.00      1.00      1.00        16
+Iris-Versicolour       1.00      0.94      0.97        18
+  Iris-Virginica       0.92      1.00      0.96        11
+
+        accuracy                           0.98        45
+       macro avg       0.97      0.98      0.98        45
+    weighted avg       0.98      0.98      0.98        45
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">plot_confusion_matrix</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">))</span>
+<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">svm_classifier</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">,</span> 
+                      <span class="n">display_labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Iris-Setosa&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-Versicolour&#39;</span><span class="p">,</span> <span class="s1">&#39;Iris-Virginica&#39;</span><span class="p">])</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[16  0  0]
+ [ 0 17  1]
+ [ 0  0 11]]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x7fe7c2346790&gt;
+</pre></div>
+</div>
+<img alt="_images/intro_21_2.png" src="_images/intro_21_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.manifold</span> <span class="kn">import</span> <span class="n">TSNE</span>
+<span class="c1"># Transformación usada para reducir la dimensión y crear un plot en baja dimensión que nos muestre el espacio vectorial en el que estamos trabajando</span>
+<span class="c1"># imprimir las dimensiones que tenemos originalemente que son 45 ejemplos y 4 dimensiones y posteriormente la transformación a 45 ejemplos pero 2 dimensiones</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="c1"># Se aplica con dos componentes y se transforman los datos de evaluación </span>
+<span class="n">X_test_embedded</span> <span class="o">=</span> <span class="n">TSNE</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">X_test_embedded</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(45, 4)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(45, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="c1"># se visualiza una reducción en el espacio en donde la clase 0 se encuentra algo separada, la 1 y la 2 están traslapadas pero esta transformación ayuda a visualizar que no es tanto el traslape </span>
+<span class="c1"># hay un punto que confunde el clasificador que está en el grupo de 1 pero pertenece al 2 </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">tsne_result_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;tsne_1&#39;</span><span class="p">:</span> <span class="n">X_test_embedded</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;tsne_2&#39;</span><span class="p">:</span> <span class="n">X_test_embedded</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">y_test</span><span class="p">})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;tsne_1&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;tsne_2&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;label&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">tsne_result_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fe7c4ed8cd0&gt;
+</pre></div>
+</div>
+<img alt="_images/intro_23_1.png" src="_images/intro_23_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predicción de ejemplo y probabilidades para las clases</span>
+<span class="n">y_predict</span><span class="o">=</span> <span class="n">svm_classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mf">10.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">7.8</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_predict</span><span class="p">)</span>
+
+
+<span class="c1"># Probabilidades para las clases </span>
+
+<span class="n">prob</span><span class="o">=</span> <span class="n">svm_classifier</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(([[</span><span class="mf">10.0</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">7.8</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prob</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1]
+[[2.62988278e-04 9.59033773e-01 4.07032389e-02]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numero de vectores de soporte por clase </span>
+<span class="c1"># PAra la clase que mejor se separa solo requirió 2 vectores de soporte, utilizó el 46 y el 66</span>
+<span class="c1"># en un problema de clasificación de proteínas los vectores soporte son las menos prototípicas de su clase pues son las que están en el límite de las otras clases</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">svm_classifier</span><span class="o">.</span><span class="n">n_support_</span><span class="p">)</span>
+
+<span class="c1">#Índices de vectores de soporte </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">svm_classifier</span><span class="o">.</span><span class="n">support_</span><span class="p">)</span>
+
+<span class="c1"># Vectores de soporte </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">svm_classifier</span><span class="o">.</span><span class="n">support_vectors_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 2  9 10]
+[46 66  7 21 29 32 34 63 87 88 96  3  9 10 11 12 14 31 44 53 74]
+[[4.5 2.3 1.3 0.3]
+ [5.1 3.3 1.7 0.5]
+ [6.3 3.3 4.7 1.6]
+ [6.1 3.  4.6 1.4]
+ [6.9 3.1 4.9 1.5]
+ [5.1 2.5 3.  1.1]
+ [6.2 2.2 4.5 1.5]
+ [5.7 2.8 4.5 1.3]
+ [6.3 2.5 4.9 1.5]
+ [6.7 3.  5.  1.7]
+ [5.9 3.2 4.8 1.8]
+ [6.  2.2 5.  1.5]
+ [6.3 2.7 4.9 1.8]
+ [6.3 2.8 5.1 1.5]
+ [4.9 2.5 4.5 1.7]
+ [6.3 2.5 5.  1.9]
+ [6.5 3.  5.2 2. ]
+ [5.9 3.  5.1 1.8]
+ [6.5 3.2 5.1 2. ]
+ [7.2 3.  5.8 1.6]
+ [6.  3.  4.8 1.8]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vectores soporte para la clase cetosa</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="mi">46</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="mi">66</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.5 2.3 1.3 0.3]
+[5.1 3.3 1.7 0.5]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hiperparámetros del modelo SVM</span>
+<span class="c1"># Son parametros de funciones que yo puedo cambiar para mejorar el entrenamiento </span>
+<span class="c1"># kernel lineal</span>
+<span class="c1"># proabbilidad </span>
+<span class="c1"># &quot;C&quot; puede aumentar o disminuir, es un un valor por el que se multiplican aquellos puntos que caen adentro del margen de decisión </span>
+<span class="c1"># Puedes penalizar mucho aquellos ejemplos que queden mal clasificados, si queremos una SVM que clasifique relativamente bien pero que no sea tan estrictamente buena, lo disminuimos </span>
+<span class="c1"># Si lo creces mucho entonces sobreajustas el modelo (overfitting), predices muy bien tus datos de entrenamiento pero nuevos datos predicen mal (lo puedes subir a 1000 pero tus datos de evaluación cae tu score </span>
+<span class="c1"># overfitting: score de entrenamiento muy alto pero score de evaluación muy bajo )</span>
+<span class="c1"># Afinación de hiperparametros es probar muchos valores de C para ver con cual valor predice mejor la máquina </span>
+<span class="c1"># El desbalance, cambias metrica de evaluación a una geométrica, oversamppling, reduciendo dimensionalidades, creando vectores artificiales </span>
+<span class="n">svm_classifier</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;C&#39;: 1.0,
+ &#39;break_ties&#39;: False,
+ &#39;cache_size&#39;: 200,
+ &#39;class_weight&#39;: None,
+ &#39;coef0&#39;: 0.0,
+ &#39;decision_function_shape&#39;: &#39;ovr&#39;,
+ &#39;degree&#39;: 3,
+ &#39;gamma&#39;: &#39;scale&#39;,
+ &#39;kernel&#39;: &#39;linear&#39;,
+ &#39;max_iter&#39;: -1,
+ &#39;probability&#39;: True,
+ &#39;random_state&#39;: None,
+ &#39;shrinking&#39;: True,
+ &#39;tol&#39;: 0.001,
+ &#39;verbose&#39;: False}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="red-neuronal-convulusional">
+<h1>Red neuronal convulusional<a class="headerlink" href="#red-neuronal-convulusional" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/fastai/fastbook/tree/master/clean">notebook github 01 y 05 ejemplo perros</a></p>
+<p>[A comprehensive guide to convolutional Neural networks the ELI5 way](<a class="reference external" href="https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53notebook">https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53notebook</a> github 01 y 05 ejemplo perros)</p>
+<p>4 capas</p>
+<ul class="simple">
+<li><p>dos convolusionales</p></li>
+<li><p>dos pooling</p></li>
+</ul>
+<p>Convolution+relu: toman los bordes de la figura
+pooling</p>
+<p>Convolution+relu:
+pooling</p>
+<p>Capa de aplanado: convierte la matriz en un vector
+Capa fully connected: todos los nodos están conectados con todos
+Softmax: convierte en números continuos float que representan ciertos umbrales y con ello predcimos la categoría, coche, van, truck</p>
+<p>Funcion de relu te da un valor de 0 a 1
+pooling te da una capa que te da una representación matricial final</p>
+<p># Proyecto</p>
+<p>Aplicar clasificación al dataset de kaggle mushroom classification</p>
+<p>class venenosos o ocomestible
+con dichas características predecir la clase
+8124 hongos</p>
+<ol class="simple">
+<li><p>Entender el data set
+<a class="reference external" href="https://www.kaggle.com/uciml/mushroom-classification">dataset kaggel mushroom</a></p></li>
+<li><p>Hacer estadística para ver qué valores tienen los atributos, cuantos son</p></li>
+<li><p>Notebook en donde se usen los dos clasificadores que utilizamos</p></li>
+<li></li>
+</ol>
+<div class="section" id="como-convertir-los-caracteres-a-numeros-para-crear-los-vectores">
+<h2>Cómo convertir los caracteres a números para crear los vectores<a class="headerlink" href="#como-convertir-los-caracteres-a-numeros-para-crear-los-vectores" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='right-next' id="next-link" href="ProyectoMushrooms-VarelaVegaAlfredo.html" title="next page">Bioinformática y Estadística II - IV Clasificación Automática</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Alfredo Varela Vega<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
